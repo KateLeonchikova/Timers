@@ -11,6 +11,7 @@ const http = require("http");
 
 const clientPromise = MongoClient.connect(process.env.DB_URI, {
   maxPoolSize: 10,
+  tls: true,
 });
 
 const app = express();
